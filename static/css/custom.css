@@ -37,3 +37,17 @@
 .essay-tags a:hover {
   text-decoration: underline;
 }
+
+.profile-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.profile-photo-rect {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  cursor: zoom-in;
+}

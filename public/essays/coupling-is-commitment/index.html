@@ -132,6 +132,49 @@
 
 </div>
   </header> 
+  <div class="post-content"><h1 id="coupling-is-not-evil--its-a-commitment">Coupling Is Not Evil &mdash; It&rsquo;s a Commitment<a hidden class="anchor" aria-hidden="true" href="#coupling-is-not-evil--its-a-commitment">#</a></h1>
+<h2 id="when-best-practices-become-blind-practices">When Best Practices Become Blind Practices<a hidden class="anchor" aria-hidden="true" href="#when-best-practices-become-blind-practices">#</a></h2>
+<p>Software engineering has a habit of turning sound reasoning into slogans. &ldquo;Loose coupling.&rdquo; &ldquo;Composition over inheritance.&rdquo; &ldquo;Microservices for everything.&rdquo; They sound modern and safe, so people repeat them without thought.<br>
+<br>
+This is how good ideas become lazy ones. It&rsquo;s easier to copy advice than to understand it. Following a slogan feels responsible &mdash; nobody gets blamed for &ldquo;best practices.&rdquo; But systems built on slogans inherit the same weakness: they look sensible on paper and collapse under real context.<br>
+<br>
+Architecture isn&rsquo;t a checklist. It&rsquo;s judgment &mdash; choosing where to commit and where to keep options open. Repeating the right answer in the wrong place is still wrong.</p>
+<h2 id="how-loose-coupling-became-a-half-truth">How &ldquo;Loose Coupling&rdquo; Became a Half-Truth<a hidden class="anchor" aria-hidden="true" href="#how-loose-coupling-became-a-half-truth">#</a></h2>
+<p>Coupling measures how tightly parts of a system depend on each other. Loose coupling means one part can change without breaking another. Tight coupling means changes ripple through connected components.<br>
+<br>
+That distinction was useful until it became gospel. The microservices movement spread the belief that loose coupling is always good, tight coupling always bad. What got lost is that independence has a cost &mdash; more APIs to design, more latency to handle, more deployments to coordinate. The system spends more effort maintaining its flexibility than delivering value.<br>
+<br>
+The APIs themselves grow complex and verbose because every dependency must now be expressed explicitly. What used to be a function call inside one process becomes a documented contract with serialization, authentication, versioning, and monitoring. Each interaction becomes a small negotiation. Multiply that by dozens of services, and you have a distributed bureaucracy disguised as architecture.<br>
+<br>
+Loose coupling has benefits &mdash; simpler testing, clearer ownership, faster parallel work. Tight coupling has technical advantages too: less overhead, better performance, simpler data flows. But those are engineering details. The real question is when each type of coupling serves the system&rsquo;s purpose. That&rsquo;s the level where most discussions stop short.<br>
+<br>
+Loose coupling only works when you already know what must stay stable. Without that understanding, it just creates optionality without direction.</p>
+<h2 id="how-coupling-creates-stability">How Coupling Creates Stability<a hidden class="anchor" aria-hidden="true" href="#how-coupling-creates-stability">#</a></h2>
+<p>Coupling isn&rsquo;t a failure of design &mdash; it&rsquo;s a statement of intent. It says: this relationship matters; these parts belong together.<br>
+<br>
+Think of a robotic arm. It can move, rotate, and reconfigure itself with remarkable freedom. But all that freedom depends on one absolute: the base is tightly coupled to the mounting point. Without that fixed anchor, the arm can&rsquo;t do anything precise &mdash; it just spins aimlessly.<br>
+<br>
+Software is no different. Some parts need to move freely &mdash; user interfaces, adapters, edge logic. Others must stay fixed &mdash; the data models, transaction logic, domain rules that define what the system is. Those tightly coupled parts form the mounting point for everything else. Their stability is what lets the rest of the system evolve safely.<br>
+<br>
+And coupling isn&rsquo;t all-or-nothing. Systems are made of regions:</p>
+<ul>
+<li>Tightly coupled cores where performance, coherence, and identity live.</li>
+<li>Loosely coupled peripheries where experimentation, extension, and adaptation happen.</li>
+</ul>
+<p>A well-designed system balances both. The tight core gives it structure; the loose edges give it reach. If everything is tightly coupled, the system becomes rigid. If nothing is, it loses shape entirely.<br>
+<br>
+Multiple services that always change together are not independent; they&rsquo;re one architectural unit disguised as many deployables. That&rsquo;s not a problem &mdash; those services may still need to exist separately for scaling, security, or regulatory reasons &mdash; but they should still be designed and evolved as a single cohesive whole. Recognizing and honoring that coupling simplifies design. Pretending it isn&rsquo;t there creates friction and fear.<br>
+<br>
+Coupling, applied consciously, turns chaos into coordination. It ties down the degrees of freedom we choose to fix, so the rest can move without risk.</p>
+<h2 id="coupling-and-the-shape-of-change">Coupling and the Shape of Change<a hidden class="anchor" aria-hidden="true" href="#coupling-and-the-shape-of-change">#</a></h2>
+<p>In the end, coupling isn&rsquo;t just a technical choice &mdash; it&rsquo;s a reflection of how the business itself expects to change. Every tightly bound part of the system declares, &ldquo;this is stable; this is who we are.&rdquo; Every loose connection says, &ldquo;this might evolve.&rdquo; Good architects align these boundaries with the business&rsquo;s own pace of change. Coupling, at its best, expresses trust &mdash; trust that some decisions will hold so others can move freely. It&rsquo;s the backbone that gives change its shape.</p>
+<h2 id="closing-thought">Closing Thought<a hidden class="anchor" aria-hidden="true" href="#closing-thought">#</a></h2>
+<p>Coupling is not evil. It&rsquo;s how we make architectural commitments.<br>
+<br>
+It defines where motion stops and meaning begins &mdash; the deliberate connections that give a system both stability and purpose.</p>
+
+
+  </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
