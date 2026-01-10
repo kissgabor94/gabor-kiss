@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>Essays</h1>
+
+<div class="essay-grid">
+  {{ range sort .Pages "Weight" }}
+    <div class="essay-tile">
+      <h2>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+
+      <div class="essay-tags">
+        {{ range .Params.tags }}
+          <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>
+        {{ end }}
+      </div>
+
+      <p>{{ .Summary }}</p>
+    </div>
+  {{ end }}
+</div>
+{{ end }}

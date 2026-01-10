@@ -1,0 +1,35 @@
+baseURL: https://gabor-kiss.com/
+languageCode: en-us
+title: "Gábor — Essays on Software Architecture, Judgment and Change"
+theme: ["PaperMod"]
+
+menu:
+  main:
+    - identifier: essays
+      name: Essays
+      url: /essays/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+
+params:
+  author: "Gábor Kiss"
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  disableSpecial1stPost: true
+  
+  assets:
+    css:
+      - css/custom.css
+
+taxonomies:
+  tag: tags
