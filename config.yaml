@@ -26,6 +26,11 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   disableSpecial1stPost: true
+
+  hideHomePagePosts: true
+
+  homeInfoParams:
+    enabled: false
   
   assets:
     css:

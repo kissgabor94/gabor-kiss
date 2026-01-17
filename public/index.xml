@@ -8,18 +8,25 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>From Code to Systems: The Three Levels of Thinking</title>
+      <title>From Code to Systems: The Three Levels of Thinking That Define Technical Growth</title>
       <link>http://localhost:1313/essays/three-levels-of-thinking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/essays/three-levels-of-thinking/</guid>
       <description>Why many architectural debates fail before they start — not because of disagreement, but because participants are reasoning at different conceptual levels without realizing it.</description>
     </item>
     <item>
-      <title>Degrees of Freedom of a System</title>
+      <title>The Degrees of Freedom of a System --- and Why Too Much Freedom Can Paralyze It</title>
       <link>http://localhost:1313/essays/degrees-of-freedom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/essays/degrees-of-freedom/</guid>
       <description>A way to think about flexibility as a structural property rather than a personality trait, and why systems lose their ability to change long before anyone notices.</description>
+    </item>
+    <item>
+      <title>Best Practices as Models, Not Dogma</title>
+      <link>http://localhost:1313/essays/best-practices-as-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/essays/best-practices-as-models/</guid>
+      <description>Best practices promise safety through repetition, yet experienced engineers often feel discomfort long before they can explain why. This essay explores why rules that once made sense can quietly lose their meaning, and why judgment begins where best practices end.</description>
     </item>
     <item>
       <title>Architecture Should Grow, Not Mutate</title>

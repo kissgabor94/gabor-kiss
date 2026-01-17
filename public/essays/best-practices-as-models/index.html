@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>The Degrees of Freedom of a System --- and Why Too Much Freedom Can Paralyze It | Gábor — Essays on Software Architecture, Judgment and Change</title>
-<meta name="keywords" content="change, architecture">
-<meta name="description" content="A way to think about flexibility as a structural property rather than a personality trait, and why systems lose their ability to change long before anyone notices.">
+<title>Best Practices as Models, Not Dogma | Gábor — Essays on Software Architecture, Judgment and Change</title>
+<meta name="keywords" content="architecture, judgement, models">
+<meta name="description" content="Best practices promise safety through repetition, yet experienced engineers often feel discomfort long before they can explain why. This essay explores why rules that once made sense can quietly lose their meaning, and why judgment begins where best practices end.">
 <meta name="author" content="Gábor Kiss">
-<link rel="canonical" href="http://localhost:1313/essays/degrees-of-freedom/">
+<link rel="canonical" href="http://localhost:1313/essays/best-practices-as-models/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/essays/degrees-of-freedom/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/essays/best-practices-as-models/">
 <noscript>
     <style>
         #theme-toggle,
@@ -126,96 +126,53 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      The Degrees of Freedom of a System --- and Why Too Much Freedom Can Paralyze It
+      Best Practices as Models, Not Dogma
     </h1>
     <div class="post-meta"><span>Gábor Kiss</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>You won&rsquo;t believe this, because I need to call a friend if I want to hang up a picture, but I studied mechatronics engineering &mdash; not software engineering, not computer science.<br>
-And even though I&rsquo;ve spent most of my career in software, I still see systems like machines. They have moving parts, constraints, and joints that define how much they can &mdash; and should &mdash; move.<br>
-<br>
-In robotics, those joints are called <strong>degrees of freedom</strong>, or DoF. Each one adds a new dimension of movement &mdash; and with it, a new dimension of complexity. The more joints an arm has, the more flexible it becomes. Up to a point, that&rsquo;s useful. Beyond that, it becomes a nightmare.<br>
-<br>
-A simple industrial robot might have three or four degrees of freedom &mdash; enough to move up and down, forward and backward, maybe rotate a bit. Add more joints and the arm gains elegance. A six-DoF robot can position its hand in almost any orientation you can imagine. But go beyond six, and things get weird.<br>
-<br>
-At that point, you enter the world of <strong>singularities</strong> &mdash; configurations where the math breaks down, where a small movement in one joint sends the entire arm flailing unpredictably. Even worse, you encounter <strong>redundancy</strong>: there are now infinite equally valid ways to reach the same point. One solution is enough; infinite of them make it impossible to choose.<br>
-<br>
-A similar problem appears in dynamics with a mechanical system made of two free joints. It&rsquo;s a simple setup &mdash; two rods linked in series &mdash; but it behaves chaotically. Move the starting position just a little, and its motion changes completely. It&rsquo;s nearly impossible to predict or stabilize. That&rsquo;s what uncontrolled freedom looks like: not power, but sensitivity to chaos.<br>
-<br>
-That, I think, is one of the best metaphors for system design I&rsquo;ve ever found.</p>
-<h3 id="what-degrees-of-freedom-mean-in-architecture">What &ldquo;Degrees of Freedom&rdquo; Mean in Architecture<a hidden class="anchor" aria-hidden="true" href="#what-degrees-of-freedom-mean-in-architecture">#</a></h3>
-<p><br>
-In software architecture, degrees of freedom are not interfaces, options, or modules. They represent <strong>the directions in which a system can evolve or adapt without breaking itself</strong> &mdash; without violating the open/closed principle.<br>
-<br>
-A degree of freedom defines how easily you can extend or reconfigure a system without modifying its core. It&rsquo;s a measure of <em>architectural adaptability.</em><br>
-<br>
-If your system needs a new feature and you can plug it in without rewriting existing logic, that&rsquo;s a degree of freedom. If the business changes its pricing model and you can adjust configurations instead of refactoring services, that&rsquo;s a degree of freedom.<br>
-<br>
-The key question for any architect is:</p>
-<blockquote>
-<p>&ldquo;In what directions can this system change safely &mdash; and are those the directions that matter most?&rdquo;</p>
-</blockquote>
-<p>That&rsquo;s what degrees of freedom mean in software design. They&rsquo;re not about motion, but about <em>change without fracture.</em></p>
-<h3 id="when-systems-have-too-many-or-too-few-joints">When Systems Have Too Many or Too Few Joints<a hidden class="anchor" aria-hidden="true" href="#when-systems-have-too-many-or-too-few-joints">#</a></h3>
-<p><br>
-In software, we talk about flexibility, extensibility, and genericity like they&rsquo;re virtues without limits. But just like robotic arms, systems need only as many degrees of freedom as their purpose demands &mdash; no more, no less.<br>
-<br>
-Rigid systems &mdash; those with too few DoF &mdash; are like industrial robots built for a single task. They&rsquo;re efficient, predictable, and safe. You wouldn&rsquo;t want your rocket engine controller to be &ldquo;configurable.&rdquo; It should do one thing, perfectly, every time.<br>
-<br>
-At the other extreme, some systems need all the flexibility they can get &mdash; like rescue robots crawling through rubble, or software platforms that must respond quickly to unpredictable business shifts. In those cases, extra freedom is the price of adaptability.<br>
-<br>
-Most systems, though, live somewhere in between. They must evolve with the business but stay stable enough to perform reliably. Here, <em>architecture is the act of balance</em> &mdash; deciding which movements to allow, and which to lock in place.<br>
-<br>
-Because freedom isn&rsquo;t inherently good or bad; it&rsquo;s only meaningful when it serves a purpose.</p>
-<h3 id="the-art-of-purposeful-constraint">The Art of Purposeful Constraint<a hidden class="anchor" aria-hidden="true" href="#the-art-of-purposeful-constraint">#</a></h3>
-<p><br>
-Good architecture is about <strong>choosing the right degrees of freedom for the system&rsquo;s purpose</strong> &mdash; and, just as importantly, leaving <em>one</em> degree free for the unknown.<br>
-<br>
-Every system will face change. Requirements evolve, users surprise you, environments shift. If you design a system so tightly that it can&rsquo;t move at all, you&rsquo;ll be forced to break it later. But if you design it to move in every direction, it will drift aimlessly.<br>
-<br>
-The trick is to constrain everything except one carefully chosen axis &mdash; a way for the system to extend or adapt without rethinking its fundamentals. That &ldquo;one free joint&rdquo; is your architectural slack &mdash; your insurance against the future.<br>
-<br>
-And how do you decide which joint to leave free? By understanding <strong>which parts of the business or infrastructure are most likely to change.</strong> Maybe it&rsquo;s regulations, maybe it&rsquo;s pricing, maybe it&rsquo;s customer touchpoints. Wherever the world moves fastest, that&rsquo;s where your system must bend.<br>
-<br>
-Every degree of freedom has a cost &mdash; in complexity, maintenance, performance, or cognitive load. Each new configuration option, abstraction, or extension point must <em>earn</em> its place.<br>
-<br>
-Because the truth is, <strong>constraints aren&rsquo;t the opposite of freedom &mdash; they&rsquo;re what make freedom usable.</strong></p>
-<h3 id="singularities-in-architecture">Singularities in Architecture<a hidden class="anchor" aria-hidden="true" href="#singularities-in-architecture">#</a></h3>
-<p><br>
-Robotic arms experience singularities when the math describing their position becomes unstable. Architecture has its own kind of singularities &mdash; points where multiple design choices lead to identical outcomes, and no clear decision stands out.<br>
-<br>
-That&rsquo;s when teams argue endlessly about frameworks, languages, or patterns that all <em>could</em> work, because the architecture itself provides no guidance. The system becomes <em>mathematically underdefined.</em><br>
-<br>
-The purpose of architecture is to <strong>avoid those singularities</strong> &mdash; to create enough structure that movement has direction. Not to fix everything in place, but to define the shape of acceptable motion.</p>
-<h3 id="closing-the-loop">Closing the Loop<a hidden class="anchor" aria-hidden="true" href="#closing-the-loop">#</a></h3>
-<p><br>
-A robotic arm with six degrees of freedom can reach almost any point within its workspace. That&rsquo;s enough. The beauty lies not in how many directions it <em>could</em> move, but in how precisely it moves toward purpose.<br>
-<br>
-Architecture works the same way. The goal isn&rsquo;t to build systems that can do everything &mdash; it&rsquo;s to build systems that move <em>elegantly</em> within the bounds of what they must do, with just enough slack to adapt when the unexpected happens.<br>
-<br>
-I suppose that&rsquo;s one thing my mechatronics background gave me: the instinct to treat flexibility as something to be <em>measured</em>, not <em>maximized.</em><br>
-<br>
-Because in the end, a system that can do everything is just one that hasn&rsquo;t decided what it&rsquo;s for.</p>
+  <div class="post-content"><p>Experienced professionals tend to recognize a particular kind of discomfort during decision-making. Not disagreement, not alarm — something subtler.</p>
+<p>A well-known best practice is proposed. It’s a good one. Familiar, widely accepted, proven in many contexts. It fits the problem on the surface, and applying it would be easy, even reassuring.</p>
+<p>And yet, as the decision takes shape, something doesn’t settle.</p>
+<p>Nothing is obviously wrong. The reasoning checks out. The practice aligns with the stated goal. Still, there’s a faint sense of resistance — as if introducing this element slightly disrupts how the system is meant to move. Progress feels less direct. The structure becomes harder to reason about, not easier.</p>
+<p>Senior people often notice this immediately, even if they don’t articulate it. The signal is there.</p>
+<p>The usual response is to distrust the signal rather than the practice. Best practices exist for a reason. They encode experience and reduce risk. Questioning them can feel like unnecessary friction, or like personal preference masquerading as judgment. So the decision proceeds, and the discomfort is set aside.</p>
+<p>A more useful move is to turn attention to the best practice itself — not to reject it, but to examine it.</p>
+<p>Every best practice originates in real problems and real failures. It represents a solution that worked often enough, under similar enough conditions, to be worth repeating. Over time, that solution becomes guidance that can be applied without reconstructing the reasoning each time. That compression is its strength.</p>
+<p>But it also hides structure.</p>
+<p>A best practice does not merely say what to do. It assumes certain properties of the environment, optimizes for a particular outcome, and accepts specific trade-offs. Once the practice becomes widespread, those assumptions tend to fade, leaving only the instruction behind.</p>
+<p>When a best practice feels slightly misaligned, that loss of context is often the reason.</p>
+<p>The practice hasn’t changed. The situation has.</p>
+<p>At this point, a useful reframing clarifies what’s happening: best practices are like models.</p>
+<p>A model is a simplified representation of reality, designed to be useful within a certain range. It highlights what mattered most in the situations that produced it and leaves other factors out on purpose. That omission is what makes the model practical — and what gives it limits.</p>
+<p>Newton’s laws of motion are a familiar example. Within their domain, they work extremely well and are often preferable because of their simplicity. More general models extend applicability, not correctness. The mistake is not using a simpler model — it’s using it where its assumptions no longer hold.</p>
+<p>Best practices work the same way. They are solutions shaped by a particular reality. When that reality shifts, the practice does not suddenly become bad; it goes out of scope. Applied without examining its assumptions, it can distort the system rather than support it, even while appearing correct.</p>
+<p>This is why the misfit is often sensed before it can be articulated. Experienced practitioners are not reacting emotionally or instinctively in a vague sense. They are noticing that a solution which works locally does not reinforce the system as a whole.</p>
+<p>Treating best practices as dogma erases this distinction. It turns accumulated experience into ritual and replaces judgment with compliance, hiding model–context mismatch behind familiarity and authority.</p>
+<p>Overcoming this does not require inventing new rules. It requires recovering the reasoning the best practice compressed, and understanding how its assumptions and restrictions led to the outcome it recommends. When those assumptions no longer hold, the same reasoning will lead to a different result — one that still serves the original intent and preserves the collective experience the practice embodies, while fitting the current system. Used this way, a best practice becomes guidance and inspiration, not an instruction to be followed unchanged.</p>
+<p>Judgment does not begin by rejecting models.
+It begins at their boundaries.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/change/">Change</a></li>
       <li><a href="http://localhost:1313/tags/architecture/">Architecture</a></li>
+      <li><a href="http://localhost:1313/tags/judgement/">Judgement</a></li>
+      <li><a href="http://localhost:1313/tags/models/">Models</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/essays/three-levels-of-thinking/">
+  <a class="prev" href="http://localhost:1313/essays/degrees-of-freedom/">
     <span class="title">« Prev</span>
     <br>
-    <span>From Code to Systems: The Three Levels of Thinking That Define Technical Growth</span>
+    <span>The Degrees of Freedom of a System --- and Why Too Much Freedom Can Paralyze It</span>
   </a>
-  <a class="next" href="http://localhost:1313/essays/best-practices-as-models/">
+  <a class="next" href="http://localhost:1313/essays/architecture-should-grow/">
     <span class="title">Next »</span>
     <br>
-    <span>Best Practices as Models, Not Dogma</span>
+    <span>Architecture Should Grow, Not Mutate</span>
   </a>
 </nav>
 

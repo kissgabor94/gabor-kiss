@@ -4,8 +4,6 @@ tags: ["systems", "judgment"]
 summary: "Why simple systems are not born but constructed, and how most complexity is not a technical failure but a cognitive one."
 weight: 50
 ---
-# Simplicity Takes Work
-
 "The technician said the air conditioner was overcomplicated. \'Why can't they just make it simple? Why do they need to overcomplicate things?\'" He was right --- too many components, too many points of failure. But that wasn't because the designer wanted it that way. It's because designing something simple takes time and money. Cheap things are complex because no one could afford to make them simple.\
 \
 The physicist Blaise Pascal once apologized in a letter: \'I have made this letter longer than usual because I have not had time to make it shorter.\' That single line captures one of the hardest truths in engineering: simplicity isn't the absence of complexity --- it's what remains after you've done the hard work to understand and refine.\

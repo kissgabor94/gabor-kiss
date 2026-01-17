@@ -1,11 +1,9 @@
 ---
-title: "From Code to Systems: The Three Levels of Thinking"
+title: "From Code to Systems: The Three Levels of Thinking That Define Technical Growth"
 tags: ["architecture", "systems"]
 summary: "Why many architectural debates fail before they start — not because of disagreement, but because participants are reasoning at different conceptual levels without realizing it."
 weight: 10
 ---
-# From Code to Systems: The Three Levels of Thinking That Define Technical Growth
-
 When I started coding, I didn't use functions, I just couldn't wrap my head around them.  
 I copied entire blocks of code whenever I needed something twice, changed a few variables, and hoped it would still work. It usually did - until it didn't.  
 

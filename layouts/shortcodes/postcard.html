@@ -1,0 +1,21 @@
+{{ $page := .Site.GetPage (.Get "src") }}
+
+{{ if $page }}
+<a class="post-entry" href="{{ $page.RelPermalink }}">
+  <header class="entry-header">
+    <h2>{{ $page.Title }}</h2>
+  </header>
+
+  {{ with $page.Params.tags }}
+  <div class="entry-footer">
+    {{ delimit . ", " }}
+  </div>
+  {{ end }}
+
+  {{ with $page.Summary }}
+  <div class="entry-content">
+    <p>{{ . }}</p>
+  </div>
+  {{ end }}
+</a>
+{{ end }}

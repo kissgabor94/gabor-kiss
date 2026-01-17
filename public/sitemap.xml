@@ -6,6 +6,8 @@
   </url><url>
     <loc>http://localhost:1313/essays/degrees-of-freedom/</loc>
   </url><url>
+    <loc>http://localhost:1313/essays/best-practices-as-models/</loc>
+  </url><url>
     <loc>http://localhost:1313/essays/architecture-should-grow/</loc>
   </url><url>
     <loc>http://localhost:1313/essays/coupling-is-commitment/</loc>
@@ -22,7 +24,11 @@
   </url><url>
     <loc>http://localhost:1313/essays/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/judgement/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/judgment/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/models/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/systems/</loc>
   </url><url>
