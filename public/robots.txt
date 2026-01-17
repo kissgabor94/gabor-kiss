@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://gabor-kiss.com/sitemap.xml
