@@ -1,8 +1,8 @@
 ---
 title: "Best Practices as Models, Not Dogma"
-tags: ["architecture", "judgement", "models"]
+tags: ["architecture", "judgment", "models"]
 summary: "Best practices promise safety through repetition, yet experienced engineers often feel discomfort long before they can explain why. This essay explores why rules that once made sense can quietly lose their meaning, and why judgment begins where best practices end."
-weight: 25
+weight: 50
 ---
 Experienced professionals tend to recognize a particular kind of discomfort during decision-making. Not disagreement, not alarm — something subtler.
 
