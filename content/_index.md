@@ -2,9 +2,9 @@
 title: "Architecture is not structure. It is judgment under uncertainty."
 layout: "home"
 ---
-This website is a slowly growing collection of essays about software architecture, systems, change, and how decisions actually get made when the rules stop working.
+This site contains essays about software systems, architecture, and decision-making under real constraints.
 
-The goal is not to provide answers, but to make better questions unavoidable.
+It focuses on what happens when rules, frameworks, and process stop being sufficient — and judgment becomes unavoidable.
 
 As a starting point, I recommend the following essays:
 

@@ -8,14 +8,14 @@ title: "About"
   </a>
 </div>
 
-I write about software architecture, systems, and the quiet failures that appear long before anything breaks.
+I write about software systems, architecture, and how decisions actually get made under real constraints.
 
-This site is not a blog. It is a public thinking surface — a place to reason about change, judgment, and complexity without hiding behind recipes or best practices.
+Most failures don’t begin with broken code. They begin much earlier — when uncertainty is avoided, responsibility is diffused, and process is used to delay commitment. I’m interested in those moments, long before anything visibly breaks.
 
-Most technical writing focuses on solutions. I am more interested in how people arrive at them, especially when the rules stop working and decisions become irreversible.
+This site is a place to think in public about judgment, change, and complexity — especially where rules, best practices, and frameworks stop being sufficient. The focus is not on prescribing solutions, but on understanding the forces that shape them.
 
-The essays here are not how-to guides. They are attempts to surface the hidden structure behind familiar problems, so that readers can recognize patterns in their own systems.
+The essays here examine familiar problems from a structural perspective: how incentives, fear, and incomplete information influence systems over time. The goal is not instruction, but recognition — so readers can see similar patterns in their own environments and act deliberately.
 
-There are no frameworks to adopt here. Only models to test.
+There are no methods to adopt and no playbooks to follow. Only models to test, trade-offs to face, and consequences to own.
 
 You can also find me on [LinkedIn](https://www.linkedin.com/in/gábor-kiss-091687b5).
