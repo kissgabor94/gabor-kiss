@@ -2,7 +2,7 @@
 title: "The Degrees of Freedom of a System --- and Why Too Much Freedom Can Paralyze It"
 tags: ["change", "architecture"]
 summary: "A way to think about flexibility as a structural property rather than a personality trait, and why systems lose their ability to change long before anyone notices."
-weight: 60
+weight: 50
 ---
 You won't believe this, because I need to call a friend if I want to hang up a picture, but I studied mechatronics engineering --- not software engineering, not computer science.\
 And even though I've spent most of my career in software, I still see systems like machines. They have moving parts, constraints, and joints that define how much they can --- and should --- move.\
