@@ -8,6 +8,6 @@ It focuses on what happens when rules, frameworks, and process stop being suffic
 
 As a starting point, I recommend the following essays:
 
-- [Simplicity Takes Work](/essays/simplicity-takes-work/)
+- [Shaping The Problem](/essays/shaping-the-problem/)
 - [Coupling Is Not Evil — It’s a Commitment](/essays/coupling-is-commitment/)
-- [Testing Makes You Faster](/essays/testing-makes-you-faster-eventually/)
+- [Simplicity Takes Work](/essays/simplicity-takes-work/)
