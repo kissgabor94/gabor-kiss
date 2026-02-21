@@ -2,7 +2,7 @@
 title: "Shaping The Problem"
 tags: ["judgment", "models", "architecture"]
 summary: "Why painful tradeoffs are often a sign of a poorly modeled problem — not a hard decision."
-weight: 65
+weight: 66
 ---
 Every architect eventually faces a design decision that feels uncomfortably tight. The options are clear, the tradeoffs well understood — yet choosing any of them feels like accepting damage in a different direction. One option strains performance, another complicates the model, a third invites operational risk.
 
