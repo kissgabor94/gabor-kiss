@@ -11,3 +11,5 @@ As a starting point, I recommend the following essays:
 - [Shaping The Problem](/essays/shaping-the-problem/)
 - [Coupling Is Not Evil — It’s a Commitment](/essays/coupling-is-commitment/)
 - [Simplicity Takes Work](/essays/simplicity-takes-work/)
+
+{{< subscribe >}}
