@@ -9,7 +9,7 @@ It focuses on what happens when rules, frameworks, and process stop being suffic
 As a starting point, I recommend the following essays:
 
 - [Shaping The Problem](/essays/shaping-the-problem/)
+- [Architecture Scales Down: The Same Rules Everywhere](/essays/architecture-scales-down/)
 - [Coupling Is Not Evil — It’s a Commitment](/essays/coupling-is-commitment/)
-- [Simplicity Takes Work](/essays/simplicity-takes-work/)
 
 {{< subscribe >}}
