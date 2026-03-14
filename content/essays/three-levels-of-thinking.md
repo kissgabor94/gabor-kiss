@@ -97,7 +97,7 @@ The key isn't to climb as fast as possible, but to know which lens you're using,
 Growth doesn't happen automatically.  
 To move up a level, you must change the questions you ask yourself.  
 From Level 1 → Level 2:  
-- Read code written by others - especially frameworks. Ask why they made those design choices.  
+- Read code written by others - especially frameworks. Ask [why they made those design choices](/essays/best-practices-as-models/).  
 - Seek design reviews, not just code reviews.  
 - Practice turning messy code into modular, self-contained components.  
 

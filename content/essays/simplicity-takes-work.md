@@ -8,7 +8,7 @@ weight: 10
 \
 The physicist Blaise Pascal once apologized in a letter: \'I have made this letter longer than usual because I have not had time to make it shorter.\' That single line captures one of the hardest truths in engineering: simplicity isn't the absence of complexity --- it's what remains after you've done the hard work to understand and refine.\
 \
-Complexity is the natural state of any system. It appears whenever understanding is incomplete. Every workaround, every \'just in case\' condition, adds another layer. Ironically, many of those \'what if\' cases aren't special at all --- they're part of the business model. A well-designed system absorbs them into its normal flow. When that happens, you know simplicity has been achieved: not by denying complexity, but by giving it a natural place to live.\
+Complexity is the natural state of any system. It appears whenever [understanding is incomplete](/essays/three-levels-of-thinking/). Every workaround, every \'just in case\' condition, adds another layer. Ironically, many of those \'what if\' cases aren't special at all --- they're part of the business model. A well-designed system absorbs them into its normal flow. When that happens, you know simplicity has been achieved: not by denying complexity, but by giving it a natural place to live.\
 \
 I remember sitting through a presentation early in my career where an \'expert\' explained that physical systems, like springs, are smooth and continuous --- while software systems are full of exceptions and special cases. He said it as if that were an inevitable truth of software. But it isn't. That's not a property of software; that's a property of poor design.\
 \

@@ -10,7 +10,7 @@ Software engineering has a habit of turning sound reasoning into slogans. "Loose
 \
 This is how good ideas become lazy ones. It's easier to copy advice than to understand it. Following a slogan feels responsible --- nobody gets blamed for "best practices." But systems built on slogans inherit the same weakness: they look sensible on paper and collapse under real context.\
 \
-Architecture isn't a checklist. It's judgment --- choosing where to commit and where to keep options open. Repeating the right answer in the wrong place is still wrong.
+Architecture isn't a checklist. It's [judgment](/essays/shaping-the-problem/) --- choosing where to commit and where to keep options open. Repeating the right answer in the wrong place is still wrong.
 
 ## How "Loose Coupling" Became a Half-Truth
 

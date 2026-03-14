@@ -13,10 +13,14 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
     - identifier: about
       name: About
       url: /about/
-      weight: 30
+      weight: 40
 
 params:
   author: "Gábor Kiss"
@@ -36,6 +40,15 @@ params:
     css:
       - css/custom.css
 
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 100
+    threshold: 0.4 # Lower is stricter, higher is "fuzzier"
+    minMatchCharLength: 2
+    keys: ["title", "permalink", "summary", "content"]
+
 taxonomies:
   tag: tags
 
@@ -43,3 +56,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

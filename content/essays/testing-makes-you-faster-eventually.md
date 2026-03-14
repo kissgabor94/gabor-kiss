@@ -73,7 +73,7 @@ It creates an organization where engineers don’t dare to change things, and ma
 Testing, CI, and QA aren’t bureaucracy. They are how we build trust into the system — technical and human alike.
 
 A good test suite is like a safety net for creativity.
-It lets you move fast, because you know when you’ve gone too far.
+It lets you move fast, because you know when you’ve [gone too far](/essays/degrees-of-freedom/).
 It turns fear into curiosity, and chaos into rhythm.
 
 Without it, everyone slows down — not because they want to, but because they’re afraid they might break something.

@@ -10,7 +10,7 @@ If I had a euro for every time someone called the Open--Closed Principle an arch
 \
 The truth is, the Open--Closed Principle (OCP) is one of the most misunderstood ideas in software. Most explanations stop where the code ends. But architecture---the stuff that's hard to change later---is exactly where OCP becomes most meaningful.\
 \
-The textbook definition says that software entities should be open for extension but closed for modification. At the code level, this often translates to "don't touch existing code; just subclass it." That's fine advice for small, stable units of logic, but architecture isn't a collection of classes---it's a collection of decisions. And those decisions, once made, are expensive to reverse. Architecture is, by definition, the part of the system that is hard to change later, so our real goal isn't to freeze it---it's to make sure that when change inevitably comes, it doesn't require rebuilding what already works.\
+The textbook definition says that software entities should be open for extension but closed for modification. At the code level, this often translates to "don't touch existing code; just subclass it." That's fine advice for small, stable units of logic, but architecture isn't a collection of classes---it's a collection of decisions. And those decisions, once made, are expensive to reverse. Architecture is, by definition, the part of the system that is [hard to change later](/essays/degrees-of-freedom/), so our real goal isn't to freeze it---it's to make sure that when change inevitably comes, it doesn't require rebuilding what already works.\
 \
 I learned this the hard way.\
 \
@@ -34,7 +34,7 @@ This ties closely to what I once described as degrees of freedom---how every dec
 \
 You can feel when an architecture violates this principle. A small change causes ripples across the entire system. A new feature needs five coordinated releases. A shared schema update breaks multiple services. Adding one new behavior forces you to revisit three old ones. These are all symptoms of a system that's "open" in the wrong places---too fragile to evolve safely.\
 \
-Ironically, the best architectures tend to follow OCP naturally because they reflect the structure of the business itself. Business domains evolve independently, and so should the systems that represent them. When your architecture mirrors your organization's logical structure, a business change becomes an architectural extension, not an architectural surgery. Each domain can grow internally without threatening the others. That's OCP in its purest form---local change with global stability.\
+Ironically, the best architectures tend to follow OCP naturally because they reflect the structure of the business itself. Business domains evolve independently, and so should the systems that [represent](/essays/architecture-scales-down/) them. When your architecture mirrors your organization's logical structure, a business change becomes an architectural extension, not an architectural surgery. Each domain can grow internally without threatening the others. That's OCP in its purest form---local change with global stability.\
 \
 Of course, even the best systems need the occasional cleanup. Old endpoints must be retired; data flows refactored. That's not a violation of OCP---it's housekeeping, not mutation. But if every change demands a "refactor month," you're not extending; you're fighting your own design.\
 \

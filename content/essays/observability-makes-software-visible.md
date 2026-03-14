@@ -30,7 +30,7 @@ Automation depends on visibility, but so do the humans running it. Some organiza
 
 Without alerts, observability is passive. With them, it becomes active — a system that not only sees itself but communicates when it’s in danger.
 
-Observability doesn’t stop at infrastructure; it’s how the entire organization learns to see itself. When every team operates blind to the effects of its changes, the whole business becomes an open loop — busy, reactive, and surprised by outcomes. True observability connects technical and human systems: engineering notices business drift; business notices technical drag. Both share one reality instead of two stories.
+Observability doesn’t stop at infrastructure; it’s how the [entire organization learns to see itself](/essays/visibility-is-not-neutral/). When every team operates blind to the effects of its changes, the whole business becomes an open loop — busy, reactive, and surprised by outcomes. True observability connects technical and human systems: engineering notices business drift; business notices technical drag. Both share one reality instead of two stories.
 
 You can’t steer what you can’t see. And you can’t lead through assumptions any more than you can fly an aircraft through clouds without instruments. Observability isn’t about data; it’s about agency — the ability to act with confidence instead of hope.
 
