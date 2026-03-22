@@ -1,6 +1,6 @@
 ---
 title: "Architecture Scales Down: The Same Rules Everywhere"
-tags: ["systems", "architecture"]
+tags: ["Systems", "Architecture"]
 summary: "Architecture isn’t a new discipline that begins where code ends; it’s the same fundamental reasoning about boundaries and dependencies, just seen from further away. Whether you're designing a class or a global service, the rules remain constant—only the physics of scale and the consequences of your judgment evolve."
 weight: 25
 ---

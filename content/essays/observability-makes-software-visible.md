@@ -1,6 +1,6 @@
 ---
 title: "Observability Makes Software Visible"
-tags: ["models", "systems"]
+tags: ["Models", "Systems"]
 summary: "Most systems aren't truly managed; they are merely monitored for failure while we fly with the windows blacked out. True observability isn't just about logs and traces—it's the instrumentation that turns an open-loop guess into a closed-loop system you can actually control."
 weight: 65
 ---

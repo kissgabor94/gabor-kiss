@@ -1,6 +1,6 @@
 ---
 title: "Testing Makes You Faster (Eventually)"
-tags: ["systems", "judgment", "change"]
+tags: ["Systems", "Judgment", "Change"]
 summary: "Speed without safety feels fast right up until it isn't - and the bill always comes due later."
 weight: 30
 ---

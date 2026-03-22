@@ -1,6 +1,6 @@
 ---
 title: "The Right Amount of Control"
-tags: ["leadership", "architecture", "judgment"]
+tags: ["Leadership", "Architecture", "Judgment"]
 summary: "Early in their careers, many architects mistake control for stability. This essay explores the moment that distinction breaks down — and what it means to move from controlling a system to truly understanding it."
 weight: 55
 ---

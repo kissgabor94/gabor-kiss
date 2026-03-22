@@ -1,6 +1,6 @@
 ---
 title: "Coupling Is Not Evil — It’s a Commitment"
-tags: ["judgment", "architecture"]
+tags: ["Judgment", "Architecture"]
 summary: "Why eliminating coupling is neither realistic nor desirable, and how the real architectural mistake is failing to recognize which commitments you are making permanent."
 weight: 20
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Shaping The Problem"
-tags: ["judgment", "models", "architecture"]
+tags: ["Judgment", "Models", "Architecture"]
 summary: "Why painful tradeoffs are often a sign of a poorly modeled problem — not a hard decision."
 weight: 66
 ---

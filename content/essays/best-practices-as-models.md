@@ -1,6 +1,6 @@
 ---
 title: "Best Practices as Models, Not Dogma"
-tags: ["architecture", "judgment", "models"]
+tags: ["Architecture", "Judgment", "Models"]
 summary: "Best practices promise safety through repetition, yet experienced engineers often feel discomfort long before they can explain why. This essay explores why rules that once made sense can quietly lose their meaning, and why judgment begins where best practices end."
 weight: 40
 ---

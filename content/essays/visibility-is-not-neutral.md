@@ -1,6 +1,6 @@
 ---
 title: "Visibility Is Not Neutral"
-tags: ["judgment", "change"]
+tags: ["Judgment", "Change"]
 summary: "Visibility is rarely a neutral act; it is a force that reshapes the work it seeks to measure. This essay explores how management pressure moves downstream and why 'apparent progress' can eventually start to dictate reality."
 weight: 64
 ---

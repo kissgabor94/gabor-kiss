@@ -1,6 +1,6 @@
 ---
 title: "The Degrees of Freedom of a System --- and Why Too Much Freedom Can Paralyze It"
-tags: ["change", "architecture"]
+tags: ["Change", "Architecture"]
 summary: "A way to think about flexibility as a structural property rather than a personality trait, and why systems lose their ability to change long before anyone notices."
 weight: 50
 ---

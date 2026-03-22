@@ -1,6 +1,6 @@
 ---
 title: "When Fear Becomes Structure"
-tags: ["systems", "judgment", "change"]
+tags: ["Systems", "Judgment", "Change"]
 summary: "An exploration of how unmanaged uncertainty turns into rigid process—and how leadership failure makes that transformation inevitable."
 weight: 60
 ---

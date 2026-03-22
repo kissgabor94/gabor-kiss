@@ -1,6 +1,6 @@
 ---
 title: "From Code to Systems: The Three Levels of Thinking That Define Technical Growth"
-tags: ["architecture", "systems"]
+tags: ["Architecture", "Systems"]
 summary: "Why many architectural debates fail before they start — not because of disagreement, but because participants are reasoning at different conceptual levels without realizing it."
 weight: 80
 ---
