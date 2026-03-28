@@ -62,7 +62,3 @@ outputs:
     - HTML
     - RSS
     - JSON
-
-module:
-  imports:
-  - path: github.com/divinerites/plausible-hugo
