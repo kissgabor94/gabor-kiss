@@ -1,0 +1,39 @@
+---
+title: "Balancing Domain and Resource Granularity in System Architecture"
+tags: ["Architecture", "DecisionMaking", "Systems"]
+summary: "Domain-driven and resource-driven design are often treated as competing philosophies. The most resilient architectures know when to use both — and why choosing only one leaves something essential on the table."
+weight: 23
+---
+When designing a system, one of the most fundamental questions is how to divide it into components. This decision determines not only how the system will perform today but also how easily it will evolve tomorrow. There are two dominant perspectives architects use when reasoning about this: domain-driven design, which structures software around the business, and resource-driven design, which structures it around technical and operational constraints. Each approach has its strengths, but taken in isolation, both can lead to fragile systems. The most successful architectures find a balance between the two.
+
+Domain-driven design aims to make the architecture reflect the logical structure of the business. Each unit—a collection of modules or services that can only function together as a single deployable component—represents a specific business domain or subdomain with a clear ownership and purpose. The power of this approach lies in its ability to reduce friction between business and IT. When the software mirrors the way the business operates, communication becomes simpler: both sides speak the same language.
+
+A domain-aligned system also changes in the same way the business does. When a business area evolves, the corresponding units evolve with it, often without affecting unrelated parts of the system. This localizes change, allowing the software to adapt naturally as the business grows or shifts direction.
+
+This approach tends to dominate in greenfield projects, or when creating new products or solutions where the idea itself is innovative but its technical execution is still fluid. It also fits young or fast-evolving businesses, where the exact structure of operations is still forming, or where responsiveness to change outweighs optimization.
+
+However, even though this approach creates a system that’s easy to understand and evolve, it can also produce inefficiencies if applied too rigidly. When every domain insists on full autonomy with its own isolated data stores, pipelines, and runtime environments, the result can be a network of distributed complexity that’s harder to operate than to reason about. [The elegance of a perfect domain model often erodes under the weight of operational overhead](/essays/degrees-of-freedom/).
+
+Resource-driven design, by contrast, organizes systems around practical constraints: compute, memory, network, storage, and the operational realities that shape performance, cost, and resilience. In this view, boundaries are drawn where [isolation improves scalability, availability, or compliance posture](/essays/coupling-is-commitment/), rather than where the business domains naturally divide.
+
+This approach becomes essential when performance or reliability is critical and the system will rarely change—in embedded systems, ultra-low-latency trading platforms, mission-critical industrial control systems, or environments bound by strict security and regulatory requirements. Here, the architecture must serve the physical and operational realities first, because the risk of downtime or compromise outweighs the benefits of alignment with an evolving business model.
+
+Security and compliance concerns often dictate resource-based decisions. Regulations may demand physical separation of systems handling sensitive data, or prohibit cloud hosting altogether. Some components may need to operate in private subnets, while others must adhere to strict encryption or audit policies. These are not abstract technicalities—they define what is even possible within a given environment.
+
+Hardware constraints play a similar role. A Redis cache might require bare-metal deployment to achieve the desired latency, while a database cluster could rely on specialized hardware such as Oracle RAC machines. Ignoring such realities in pursuit of conceptual purity leads to fragile designs that work beautifully on paper but fail under real load.
+
+Still, a purely resource-driven approach risks alienating the business. When systems are organized purely around throughput or availability zones, their structure loses meaning outside technical circles. Business stakeholders no longer see how the system reflects their processes or goals. The architecture becomes a technical artifact rather than a shared model of the business—and with that, the conversation between business and IT starts to erode.
+
+The real challenge isn’t choosing between the two perspectives, but knowing when and how to blend them. [Architecture is the art of trade-offs](/essays/shaping-the-problem/), and nowhere is that more evident than in deciding the boundaries of a system’s units.
+
+A practical approach is to begin by modeling the system along the logical business structure, at a coarser level of granularity. Each unit should encapsulate a major domain concept—large enough to be stable and meaningful, but modular enough to split cleanly later if justified by real-world constraints. This doesn’t just apply after the system is live; it’s equally valuable during the design phase. If the exact boundaries aren’t yet clear, assume broader units at first, then refine them iteratively as new insights emerge from performance, data, or dependency considerations. The [design process should move from high-level structure to increasing depth](/essays/architecture-scales-down/), rather than being laid out from left to right in one pass.
+
+As the system matures, resource-based concerns will begin to shape it further. Some units may need to split to isolate heavy workloads, separate trust boundaries, or comply with infrastructure requirements. Others may consolidate to simplify deployment or improve latency. What matters is that these decisions emerge from understanding both the business and the environment it operates in. An architect must know the business deeply enough to judge when divergence from its logical structure is acceptable—and how much—without losing alignment between the two worlds.
+
+When domain and resource perspectives are consciously balanced, the gap between business and IT narrows. Business stakeholders recognize the system’s structure because it reflects their organization and processes. Technical teams, in turn, can justify resource-based design decisions in ways that resonate with business priorities—security, cost efficiency, compliance, or operational stability.
+
+This shared understanding transforms potential conflict into cooperation. When business leaders propose a new capability, it can be mapped directly to affected domains. When IT raises constraints about performance or isolation, those limits are seen as legitimate design considerations, not arbitrary barriers. As a result, both sides work in unison toward a single evolving system rather than negotiating across a divide.
+
+Balancing domain and resource granularity is one of the defining skills of a good architect. Domain-driven design provides clarity and adaptability; resource-driven design ensures robustness and realism. Neither alone is sufficient.
+
+A well-designed system grows from the logic of the business but survives through respect for the environment it runs in. Systems that master this balance evolve gracefully—changing with both the business and the world around it, without losing coherence or stability.
